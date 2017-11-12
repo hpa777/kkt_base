@@ -1,0 +1,29 @@
+C:\Documents and Settings\Администратор\Мои документы\Visual Studio 2008\Projects\kkt-base\WindowsFormsApplication2\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Администратор\Мои документы\Visual Studio 2008\Projects\kkt-base\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+C:\Documents and Settings\Администратор\Мои документы\Visual Studio 2008\Projects\kkt-base\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
+C:\Documents and Settings\Администратор\Мои документы\Visual Studio 2008\Projects\kkt-base\WindowsFormsApplication2\bin\Debug\kkt.sdf
+C:\Documents and Settings\Администратор\Мои документы\Visual Studio 2008\Projects\kkt-base\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+C:\Documents and Settings\Администратор\Мои документы\Visual Studio 2008\Projects\kkt-base\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+C:\Documents and Settings\Администратор\Мои документы\Visual Studio 2008\Projects\kkt-base\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+C:\Documents and Settings\Администратор\Мои документы\Visual Studio 2008\Projects\kkt-base\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+C:\Documents and Settings\Администратор\Мои документы\Visual Studio 2008\Projects\kkt-base\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+C:\Documents and Settings\Администратор\Мои документы\Visual Studio 2008\Projects\kkt-base\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.NewDocForm.resources
+C:\temp\ККТ\kkt-base\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.ResolveComReference.cache
+C:\temp\ККТ\kkt-base\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.NewDocForm.resources
+C:\temp\ККТ\kkt-base\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+C:\temp\ККТ\kkt-base\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
+C:\temp\ККТ\kkt-base\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+C:\temp\ККТ\kkt-base\WindowsFormsApplication2\bin\Debug\kkt.sdf
+C:\temp\ККТ\kkt-base\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+C:\temp\ККТ\kkt-base\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+C:\temp\ККТ\kkt-base\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+C:\temp\ККТ\kkt-base\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+C:\temp\ККТ\kkt-base\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Report1.resources
+C:\temp\ККТ\kkt-base\WindowsFormsApplication2\obj\Debug\RdlCompile.cache
+C:\temp\ККТ\kkt-base\WindowsFormsApplication2\obj\Debug\RdlCompile.compiled
+C:\temp\ККТ\kkt-base\WindowsFormsApplication2\bin\Debug\Report1.rdlc
+C:\temp\ККТ\kkt-base\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Report2.resources
+C:\temp\ККТ\kkt-base\WindowsFormsApplication2\bin\Debug\Report2.rdlc
+C:\temp\ККТ\kkt-base\WindowsFormsApplication2\bin\Debug\office.dll
+C:\temp\ККТ\kkt-base\WindowsFormsApplication2\bin\Debug\Microsoft.Office.Interop.Word.dll
+C:\temp\ККТ\kkt-base\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csprojResolveAssemblyReference.cache
