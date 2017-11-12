@@ -90,7 +90,6 @@ namespace WindowsFormsApplication2
             doc_kkmBindingSource.ResetBindings(true);
 
             addKkmButton.Enabled = deleteKkmButton.Enabled = saveKkmButton.Enabled = false;
-
             kktBindingNavigator.CausesValidation = true;
 
             dirComboBox.Items.Add(new ComboboxItem("Статус оплаты", this.paymentstatusdirBindingSource));
