@@ -18,6 +18,8 @@ namespace WindowsFormsApplication2
 
         kktDataSetTableAdapters.kkm_listTableAdapter kkm_list_ta;
 
+        private DataGridViewTextBoxColumn inn_dir_col, full_name_dir_col;
+
         public NewDocForm()
         {
             InitializeComponent();
@@ -49,6 +51,18 @@ namespace WindowsFormsApplication2
             doc_fields.Add("email", "{0}");
 
             kkm_list_ta = new kktDataSetTableAdapters.kkm_listTableAdapter();
+
+            inn_dir_col = new DataGridViewTextBoxColumn();
+            inn_dir_col.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            inn_dir_col.DataPropertyName = "inn";
+            inn_dir_col.HeaderText = "ИНН";
+            inn_dir_col.Name = "inn_dir_col";
+
+            full_name_dir_col = new DataGridViewTextBoxColumn();
+            full_name_dir_col.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;            
+            full_name_dir_col.HeaderText = "Полное наименование";
+            full_name_dir_col.Name = "full_name_dir_col";
+            
         }
 
         private void FindAndReplace(Microsoft.Office.Interop.Word.Application wordApp, object findText, object replaceWithText)
@@ -83,7 +97,7 @@ namespace WindowsFormsApplication2
             this.doc_headTableAdapter.Fill(this.kktDataSet.doc_head);
             this.doc_kkmTableAdapter.Fill(this.kktDataSet.doc_kkm);
             FillDir();
-            fn_number_dirBindingSource.Filter = "kkm_id Is NULL";
+            fn_number_dirBindingSource.Filter = "kkm_id Is NULL and deleted Is NULL";
             fn_mp_dirBindingSource.Filter = "kkm_id Is NULL";
 
             doc_headBindingSource.ResetBindings(true);
@@ -178,6 +192,119 @@ namespace WindowsFormsApplication2
             
         }
 
+        private void заявлениеОСнятииСРегистрацииToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (doc_headBindingSource.Current == null || doc_kkmBindingSource == null) return;
+            string fileName = getFileName();
+            if (fileName == null) return;
+
+            using (ExcelHelper excelHelper = new ExcelHelper("unreg.xls"))
+            {
+                DataRowView dh = doc_headBindingSource.Current as DataRowView;
+                DataRowView dk = doc_kkmBindingSource.Current as DataRowView;
+                excelHelper.setActiveSheet(1);
+                //ИНН
+                excelHelper.writeString(new string[] { "AN1:BU1" }, dh["inn"].ToString());
+                //Наименование орг.
+                excelHelper.writeString(new string[] { "A10:DN10", "A12:DN12", "A14:DN14" }, dh["full_name"].ToString());
+                //Наименование ККМ
+                excelHelper.writeString(new string[] { "BC20:DH20" }, getParentValue(dk.Row, "model_kkm_ref", "value"));
+                //Заводской номер
+                excelHelper.writeString(new string[] { "BC22:DH22" }, dk["number"].ToString());
+                //Представитель
+                excelHelper.writeString(new string[] { "A40:BF40", "A42:BF42", "A44:BF44" }, dh["member_im"].ToString(), true);
+                excelHelper.saveDoc(fileName);
+                MessageBox.Show("Файл сохранен", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+        }
+
+        private void заявлениеОРегистрацииToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (doc_headBindingSource.Current == null || doc_kkmBindingSource == null) return;
+            string fileName = getFileName();
+            if (fileName == null) return;            
+
+            using (ExcelHelper excelHelper = new ExcelHelper("reg.xls"))
+            {
+                DataRowView dh = doc_headBindingSource.Current as DataRowView;
+                excelHelper.setActiveSheet(1);
+                //ОГРН
+                excelHelper.writeString(new string[] { "AN1:CD1" }, dh["ogrn"].ToString());
+                //ИНН
+                excelHelper.writeString(new string[] { "AN4:BU4" }, dh["inn"].ToString());
+                //КПП
+                excelHelper.writeString(new string[] { "AN6:BL6" }, dh["kpp"].ToString());
+                //Наименование орг.
+                excelHelper.writeString(new string[] { "A17:DN17", "A19:DN19", "A21:DN21" }, dh["full_name"].ToString());
+                //Представитель
+                excelHelper.writeString(new string[] { "A36:BF36", "A38:BF38", "A40:BF40" }, dh["member_im"].ToString(), true);
+
+                DataRowView dk = doc_kkmBindingSource.Current as DataRowView;
+                excelHelper.setActiveSheet(3);
+                //Наименование ККМ
+                excelHelper.writeString(new string[] { "BC13:DH13", "BC15:DH15" }, getParentValue(dk.Row, "model_kkm_ref", "value"));
+                //Заводской номер
+                excelHelper.writeString(new string[] { "BC17:DH17", "BC19:DH19" }, dk["number"].ToString());
+                //Наименовани ФН
+                excelHelper.writeString(new string[] { "BC21:DH21", "BC23:DH23", "BC25:DH25", "BC27:DH27", "BC29:DH29", "BC31:DH31" }, getParentValue(dk.Row, "mp_ref", "description"));
+
+                //Заводской номер ФН
+                excelHelper.writeString(new string[] { "BC33:DH33" }, getParentValue(dk.Row, "fn_num_ref", "value"));
+
+                //Индекс
+                excelHelper.writeString(new string[] { "AE38:AT38" }, dk["zip_code"].ToString());
+                //Код региона
+                excelHelper.writeString(new string[] { "DK38:DN38" }, dk["region_code"].ToString());
+                //Район
+                excelHelper.writeString(new string[] { "AE40:DN40" }, dk["district"].ToString());
+                //Город
+                excelHelper.writeString(new string[] { "AE42:DN42" }, dk["city"].ToString());
+                //Населенный пункт
+                excelHelper.writeString(new string[] { "AE44:DN44" }, dk["settlement"].ToString());
+
+                excelHelper.setActiveSheet(4);
+                //Улица
+                excelHelper.writeString(new string[] { "AE9:DN9" }, dk["street"].ToString());
+                //Номер дома 
+                excelHelper.writeString(new string[] { "AE11:AZ11" }, dk["house_number"].ToString());
+                //Номер корпуса 
+                excelHelper.writeString(new string[] { "AE13:AZ13" }, dk["building_number"].ToString());
+                //Номер квартиры 
+                excelHelper.writeString(new string[] { "AE15:AZ15" }, dk["apartment_number"].ToString());
+                //Место установки
+                excelHelper.writeString(new string[] { "AZ18:DE18", "AZ20:DE20", "AZ22:DE22", "AZ24:DE24" }, dk["location_full"].ToString());
+
+                excelHelper.setActiveSheet(7);
+                //Наименование ОФД
+                excelHelper.writeString(new string[] { "BC12:DH12", "BC14:DH14", "BC16:DH16", "BC18:DH18" }, getParentValue(dk.Row, "ofd_ref", "full_name"));
+                //ИНН ОФД
+                excelHelper.writeString(new string[] { "BC21:CJ21" }, getParentValue(dk.Row, "ofd_ref", "inn"));
+                excelHelper.saveDoc(fileName);
+                MessageBox.Show("Файл сохранен", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+            }
+        }
+
+        private string getFileName()
+        {
+            using (SaveFileDialog fd = new SaveFileDialog())
+            {
+                fd.DefaultExt = "xlsx";
+                fd.AddExtension = true;
+                fd.Filter = "Data Files (*.xlsx)|*.xlsx";
+                if (fd.ShowDialog(this) == System.Windows.Forms.DialogResult.OK)
+                {
+                    return fd.FileName;
+                }
+                else return null;
+            }
+        }
+
+        private string getParentValue(DataRow childRow, string relationName, string fieldName){
+            DataRow parentRow = childRow.GetParentRow(relationName);
+            return parentRow != null ? parentRow[fieldName].ToString() : String.Empty;
+        }
+
         private void doc_headBindingSource_CurrentChanged(object sender, EventArgs e)
         {
             DataRowView dr = doc_headBindingSource.Current as DataRowView;
@@ -241,7 +368,7 @@ namespace WindowsFormsApplication2
 
         private void TextBox_Validated(object sender, EventArgs e)
         {
-            validate(((TextBox)sender).Text, sender);
+            validate(((System.Windows.Forms.TextBox)sender).Text, sender);
         }
 
         private void ComboBox_Validated(object sender, EventArgs e)
@@ -300,7 +427,7 @@ namespace WindowsFormsApplication2
                 fn_num_idComboBox.Visible = true;
                 fn_mp_label.Visible = false;
                 deleteMpButton.Visible = false;
-                mp_idComboBox.Visible = true;
+                mp_idComboBox.Visible = true;              
             }
             else
             {
@@ -314,11 +441,11 @@ namespace WindowsFormsApplication2
                     fn_num_idComboBox.Visible = true;
                     fn_mp_label.Visible = false;
                     deleteMpButton.Visible = false;
-                    mp_idComboBox.Visible = true;
+                    mp_idComboBox.Visible = true;                    
                 }
                 else if (dr.IsEdit)
                 {
-
+                    locationButton.Enabled = true;
                     if (dr["fn_num_id"] != DBNull.Value)
                     {
                         fn_num_label.Text = (string)fn_number_dirTableAdapter.GetById((int)dr["fn_num_id"]);
@@ -357,7 +484,7 @@ namespace WindowsFormsApplication2
             DataRowView dr = this.doc_kkmBindingSource.Current as DataRowView;
             dr["fn_num_id"] = DBNull.Value;
             this.tableAdapterManager.UpdateAll(this.kktDataSet);
-
+            
             fn_num_label.Visible = false;
             deleteNumButton.Visible = false;
             fn_num_idComboBox.Visible = true;
@@ -471,14 +598,21 @@ namespace WindowsFormsApplication2
         }
 
 
-        private void unbindChildDoc(string field)
+        private int? unbindChildDoc(string field)
         {
             DataRowView dr = doc_kkmBindingSource.Current as DataRowView;
             DataRow doc = dr.Row.GetParentRow(field);
+            int? id = null;
             if (doc != null)
             {
                 doc["kkm_id"] = DBNull.Value;
+                id = (int)doc["id"];
+                if (field == "fn_num_ref")
+                {
+                    doc["deleted"] = true;
+                }
             }
+            return id;
         }
 
 
@@ -499,7 +633,32 @@ namespace WindowsFormsApplication2
 
         private void dirComboBox_TextChanged(object sender, EventArgs e)
         {
-            dirGridView.DataSource = ((ComboboxItem)dirComboBox.SelectedItem).Value as BindingSource;
+            removeDirColumn(inn_dir_col);
+            removeDirColumn(full_name_dir_col);
+            BindingSource source = ((ComboboxItem)dirComboBox.SelectedItem).Value as BindingSource;
+            if (source.DataMember.Equals("ofd_dir"))
+            {
+                full_name_dir_col.DataPropertyName = "full_name";
+                dirGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+                    inn_dir_col,
+                    full_name_dir_col
+                });
+            }
+            else if (source.DataMember.Equals("fn_mp_dir"))
+            {
+                full_name_dir_col.DataPropertyName = "description";
+                dirGridView.Columns.Add(full_name_dir_col);
+            }            
+            dirGridView.DataSource = source;
+        }
+
+        private void removeDirColumn(DataGridViewColumn column)
+        {
+            int i = dirGridView.Columns.IndexOf(column);
+            if (i > 0)
+            {
+                dirGridView.Columns.RemoveAt(i);
+            }
         }
 
         private void dirGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -536,8 +695,6 @@ namespace WindowsFormsApplication2
 
             }
         }
-
-
 
 
         private void tabPage3_Leave(object sender, EventArgs e)
@@ -637,10 +794,11 @@ namespace WindowsFormsApplication2
             }
             sumLabel.Text = String.Empty;
         }
-
-        private void data_activationDateTimePicker_ValueChanged(object sender, EventArgs e)
+                
+        private void add_time_button_Click(object sender, EventArgs e)
         {
-            data_changeDateTimePicker.Value = ((DateTimePicker)sender).Value.AddMonths(13);
+            int months = Int16.Parse(((System.Windows.Forms.Button)sender).Text);
+            data_changeDateTimePicker.Value = data_activationDateTimePicker.Value.AddMonths(months);
             data_changeDateTimePicker.DataBindings[0].WriteValue();
         }
 
@@ -653,6 +811,7 @@ namespace WindowsFormsApplication2
                 {
                     payment_status_idLabel.BackColor = Color.Red;
                     payment_status_idLabel.ForeColor = Color.White;
+                    
                 }
                 else
                 {
@@ -710,14 +869,24 @@ namespace WindowsFormsApplication2
 
         }
 
+        private void locationButton_Click(object sender, EventArgs e)
+        {
+            DataRowView rv = (DataRowView)doc_kkmBindingSource.Current;
+            kktDataSet.doc_kkmRow selectedRow = (kktDataSet.doc_kkmRow)rv.Row;
+            if (selectedRow.id > 0)
+            {
+                int currentPosition = doc_kkmBindingSource.Position;
+                LocationForm locForm = new LocationForm(selectedRow.id);
+                locForm.ShowDialog(this);
+                this.doc_kkmTableAdapter.Fill(this.kktDataSet.doc_kkm);
+                doc_kkmBindingSource.Position = currentPosition;
+            }
+        }
+        
+
         
 
        
-
-
-
-
-
 
     }
 }

@@ -177,9 +177,6 @@
   <metadata name="emailLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="payment_status_idLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
   <metadata name="periodLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
@@ -232,7 +229,7 @@
     <value>False</value>
   </metadata>
   <metadata name="doc_headBindingNavigator.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 222</value>
+    <value>429, 173</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="AddDocButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -248,7 +245,7 @@
 </value>
   </data>
   <metadata name="doc_headBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>156, 25</value>
+    <value>128, 17</value>
   </metadata>
   <metadata name="kktDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -328,17 +325,17 @@
   <data name="printButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        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
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJfSURBVDhPrZHrT1JhHMdZ61V/Qr3vdb1wba3rZgvFS1ot
+        VFSC6UrKBloHRWUZUmFOu1hLcnZ0TsGhFjqGpjSWTiEn87J0uXkhLwVCAhKG8A0ORxm2trb6bL/t2dnz
+        /X6e/Q7jv2MwGPar+yxFnYNT+NNoBiZBX/8dld4iGh2dd2MPWz+3sbjiRIduBEm5JcGEbPFhOhJF9W78
+        kEo/jkAgCJvDBaP5EzXd/Sa0a4dhnloCp1CO81cIJx2JpUVrejW/7KCdEcLmDbcP03Nr0OhNYOWIgwkc
+        QkBHojR0fTii1AxjO2RfWrXH2HXGCZgmF5FRIENqlsT3SPkGT5t10T2U1bRlhsMDptld64551e7B7IId
+        De39SOaWQlrbikbNEJKvSiIFxH0yVfaiY5nUfsRLlREtb0fxhNTj7mMVhJVKcEXVSOOXIzGbQOaNKtQ1
+        9aBYpkRijjhSUPO6Dy6PjzLvxb8dgNfnp17yzeHFl69uSBQk8ona0AtKIwWy553Qvregq98MstOAZ829
+        kNerUapoQmFFPXhF1WAXVOICTwJmVjFuhr5lCO7hzKXCSIG0Tg3rio12xuLa3MLi6gYOgEHNPpIBrvAh
+        knIIxCXwd3bQ5pyYWUBoZ7uEz+tuP2asmxiadlDhHrrgYl45TqULogUVCrJK2qDxLtl8cHiCWPkexNxa
+        ACOff6B3zI1Wo5MK7sw5tpAKxzF53VRBvujBCbG8aX1wzEr927+ZcMHReN5BqiDM7arG0+n5UqTwysDK
+        LQGTcwfxbBHOXr6Fk2kCHE+5hmOsvIiZsvOv09F/hcH4BYWJJhyGVEhUAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="toolStripLabel1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -363,9 +360,6 @@
   <metadata name="payment_status_id.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="paymentstatusdirBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>114, 52</value>
-  </metadata>
   <metadata name="unactive_kkm.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -385,7 +379,7 @@
     <value>True</value>
   </metadata>
   <metadata name="doc_kkmBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>543, 23</value>
+    <value>488, 17</value>
   </metadata>
   <data name="deleteMpButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -420,13 +414,13 @@
 </value>
   </data>
   <metadata name="fn_mp_dirBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>515, 124</value>
+    <value>17, 134</value>
   </metadata>
   <metadata name="fn_number_dirBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>485, 187</value>
+    <value>17, 173</value>
   </metadata>
   <metadata name="kktBindingNavigator.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>216, 222</value>
+    <value>628, 173</value>
   </metadata>
   <data name="addKkmButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -441,7 +435,7 @@
 </value>
   </data>
   <metadata name="doc_kkmBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>543, 23</value>
+    <value>488, 17</value>
   </metadata>
   <data name="bindingNavigatorMoveFirstItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -515,14 +509,30 @@
         AABJRU5ErkJggg==
 </value>
   </data>
+  <data name="toolStripSplitButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJeSURBVDhPrZHrT5JhGMZZ61N/Qn3vc31wba3jZgvEQ1ot
+        PCHBZCVFEy1QVBaBFea0g7UgR6/OKTjUQufQlMbSKeZkHpYuNwXyUCqkKGEIV/DyIsPW1la/7d6evXuu
+        6/fsfmn/HbPZvF/fYytq65/En8bQNwHq+u/oTDbR8PCcB3vY/rkD+6Ibrd1DSM4rCTJyJYepSAzdu7FD
+        OtMYAoEgVlwbsIx8Iqej14oW4yBGJh3IEVbi/BWxm4rE02i0vppbcFHOCGHzuseHqdllGExWMNmSICNH
+        LKAiMdTtH45oDIPYCdkdS6tx9m7LOKwTdmQWKJCWLfU90rzB04bu2B7KqpuzwuE+68yuNWpeWt3EzPwq
+        1C29SOGUQlbThHrDAFKuSiMF4vtEmuJF6wJh/IiXOgsa3w7jCWHC3cc6FMo14IiqkM4rR1KuGFk3lKjV
+        dqJYoUESWxIpqH7dg41NH2nei38nAK/PT77km8uLL189kKoI8MU1oReURgoUz9tgfG9De+8IiDYznjV0
+        obJOj1KVFsKKOnCLqsAqkOMCVwp6djFuhr5lCu7hzCVhpEBWq4dzcYVyxrOxtQ370joOgEbOPoIGTuFD
+        JLPFSGDwojtodo9PzyO0s13C5zWPH9POLQxMuchwJ1VwMb8cpzIEsYIKFaGUqw1ex4oPrs0gFr8HMbsc
+        wNDnH+ga9aDJ4iaD0TnHKiTDCXRuB1nAFz04IanUrvWPOsl/+zcTLjiayD1IFoS5raw/ncGXIZVbBmZe
+        Ceg5d5DIEuHs5Vs4mS7A8dRrOMbMj5hJO+86Ff1XaLRfiIYmH712HMIAAAAASUVORK5CYII=
+</value>
+  </data>
   <metadata name="payment_status_id.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="paymentstatusdirBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>114, 52</value>
+    <value>17, 56</value>
   </metadata>
   <metadata name="paymentstatusdirBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>114, 52</value>
+    <value>17, 56</value>
   </metadata>
   <metadata name="unactive_kkm.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -531,52 +541,52 @@
     <value>True</value>
   </metadata>
   <metadata name="model_kkm_dirBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>506, 88</value>
+    <value>188, 95</value>
   </metadata>
   <metadata name="model_kkm_dirBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>506, 88</value>
+    <value>188, 95</value>
   </metadata>
   <metadata name="service_type_id.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="servicetypedirBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>120, 109</value>
+    <value>608, 95</value>
   </metadata>
   <metadata name="servicetypedirBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>120, 109</value>
+    <value>608, 95</value>
   </metadata>
   <metadata name="price_id.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="pricedirBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>157, 79</value>
+    <value>851, 56</value>
   </metadata>
   <metadata name="pricedirBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>157, 79</value>
+    <value>851, 56</value>
   </metadata>
   <metadata name="master_id.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="masters_dirBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>519, 56</value>
+    <value>472, 56</value>
   </metadata>
   <metadata name="masters_dirBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>519, 56</value>
+    <value>472, 56</value>
   </metadata>
   <metadata name="ofd_id.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="ofd_dirBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>525, 154</value>
+    <value>550, 134</value>
   </metadata>
   <metadata name="ofd_dirBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>525, 154</value>
+    <value>550, 134</value>
   </metadata>
   <metadata name="fn_mp_dirBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>515, 124</value>
+    <value>17, 134</value>
   </metadata>
   <metadata name="fn_number_dirBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>485, 187</value>
+    <value>17, 173</value>
   </metadata>
   <metadata name="value.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -585,54 +595,54 @@
     <value>True</value>
   </metadata>
   <metadata name="payfkBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>625, 222</value>
+    <value>133, 212</value>
   </metadata>
   <metadata name="doc_headTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>314, 26</value>
+    <value>311, 17</value>
   </metadata>
   <metadata name="tableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>28, 143</value>
+    <value>379, 134</value>
   </metadata>
   <metadata name="doc_kkmTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>699, 26</value>
+    <value>667, 17</value>
   </metadata>
   <metadata name="fn_mp_dirTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>693, 127</value>
+    <value>201, 134</value>
   </metadata>
   <metadata name="fn_number_dirTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>665, 183</value>
+    <value>226, 173</value>
   </metadata>
   <metadata name="masters_dirTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>701, 54</value>
+    <value>664, 56</value>
   </metadata>
   <metadata name="model_kkm_dirTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>699, 84</value>
+    <value>401, 95</value>
   </metadata>
   <metadata name="ofd_dirTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>696, 154</value>
+    <value>718, 134</value>
   </metadata>
   <metadata name="payment_status_dirTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>301, 53</value>
+    <value>242, 56</value>
   </metadata>
   <metadata name="price_dirTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>301, 83</value>
+    <value>17, 95</value>
   </metadata>
   <metadata name="service_type_dirTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>298, 111</value>
+    <value>814, 95</value>
   </metadata>
   <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>379, 222</value>
+    <value>791, 173</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>167</value>
+    <value>74</value>
   </metadata>
   <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>509, 222</value>
+    <value>17, 212</value>
   </metadata>
   <metadata name="reportDataTable1BindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>785, 222</value>
+    <value>293, 212</value>
   </metadata>
   <metadata name="reportDataTable1TableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1011, 222</value>
+    <value>519, 212</value>
   </metadata>
 </root>
