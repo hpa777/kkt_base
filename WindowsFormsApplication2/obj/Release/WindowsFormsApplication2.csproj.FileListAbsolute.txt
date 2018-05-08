@@ -3,7 +3,7 @@ C:\temp\ККТ\kkt-base\WindowsFormsApplication2\bin\Release\Report2.rdlc
 C:\temp\ККТ\kkt-base\WindowsFormsApplication2\bin\Release\WindowsFormsApplication2.exe.config
 C:\temp\ККТ\kkt-base\WindowsFormsApplication2\bin\Release\WindowsFormsApplication2.exe
 C:\temp\ККТ\kkt-base\WindowsFormsApplication2\bin\Release\WindowsFormsApplication2.pdb
-C:\temp\ККТ\kkt-base\WindowsFormsApplication2\bin\Release\office.dll
+C:\temp\ККТ\kkt-base\WindowsFormsApplication2\bin\Release\Office.dll
 C:\temp\ККТ\kkt-base\WindowsFormsApplication2\bin\Release\Microsoft.Office.Interop.Excel.dll
 C:\temp\ККТ\kkt-base\WindowsFormsApplication2\bin\Release\Microsoft.Office.Interop.Word.dll
 C:\temp\ККТ\kkt-base\WindowsFormsApplication2\obj\Release\WindowsFormsApplication2.csproj.ResolveComReference.cache

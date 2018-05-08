@@ -62,7 +62,7 @@ namespace WindowsFormsApplication2
             full_name_dir_col.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;            
             full_name_dir_col.HeaderText = "Полное наименование";
             full_name_dir_col.Name = "full_name_dir_col";
-            
+            full_name_dir_col.MaxInputLength = 255;
         }
 
         private void FindAndReplace(Microsoft.Office.Interop.Word.Application wordApp, object findText, object replaceWithText)
@@ -425,9 +425,7 @@ namespace WindowsFormsApplication2
                 fn_num_label.Visible = false;
                 deleteNumButton.Visible = false;
                 fn_num_idComboBox.Visible = true;
-                fn_mp_label.Visible = false;
-                deleteMpButton.Visible = false;
-                mp_idComboBox.Visible = true;              
+                      
             }
             else
             {
@@ -439,9 +437,7 @@ namespace WindowsFormsApplication2
                     fn_num_label.Visible = false;
                     deleteNumButton.Visible = false;
                     fn_num_idComboBox.Visible = true;
-                    fn_mp_label.Visible = false;
-                    deleteMpButton.Visible = false;
-                    mp_idComboBox.Visible = true;                    
+                                      
                 }
                 else if (dr.IsEdit)
                 {
@@ -459,19 +455,7 @@ namespace WindowsFormsApplication2
                         deleteNumButton.Visible = false;
                         fn_num_idComboBox.Visible = true;
                     }
-                    if (dr["mp_id"] != DBNull.Value)
-                    {
-                        fn_mp_label.Text = (string)fn_mp_dirTableAdapter.GetById((int)dr["mp_id"]);
-                        fn_mp_label.Visible = true;
-                        deleteMpButton.Visible = true;
-                        mp_idComboBox.Visible = false;
-                    }
-                    else
-                    {
-                        fn_mp_label.Visible = false;
-                        deleteMpButton.Visible = false;
-                        mp_idComboBox.Visible = true;
-                    }
+                    
 
                 }
             }
@@ -492,18 +476,7 @@ namespace WindowsFormsApplication2
 
         }
 
-        private void deleteMpButton_Click(object sender, EventArgs e)
-        {
-            unbindChildDoc("mp_ref");
-            DataRowView dr = this.doc_kkmBindingSource.Current as DataRowView;
-            dr["mp_id"] = DBNull.Value;
-            this.tableAdapterManager.UpdateAll(this.kktDataSet);
-
-            fn_mp_label.Visible = false;
-            deleteMpButton.Visible = false;
-            mp_idComboBox.Visible = true;
-            mp_idComboBox.SelectedItem = null;
-        }
+        
 
         private void addKkmButton_Click(object sender, EventArgs e)
         {
@@ -528,16 +501,7 @@ namespace WindowsFormsApplication2
                     fn_num_idComboBox.Visible = false;
 
                 }
-                rdr = dr.Row.GetParentRow("mp_ref");
-                if (rdr != null)
-                {
-                    rdr["kkm_id"] = 1;
-                    fn_mp_label.Text = (string)rdr["value"];
-                    fn_mp_label.Visible = true;
-                    deleteMpButton.Visible = true;
-                    mp_idComboBox.Visible = false;
-
-                }
+                
 
                 try
                 {

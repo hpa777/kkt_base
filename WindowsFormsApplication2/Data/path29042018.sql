@@ -1,4 +1,5 @@
 USE kkt_base;
+
 ALTER TABLE dbo.fn_number_dir ADD deleted bit NULL;
 ALTER TABLE dbo.ofd_dir ADD full_name nvarchar(255) null, inn bigint null;
 ALTER TABLE dbo.doc_kkm ADD
@@ -15,3 +16,4 @@ location_full nvarchar(255) null;
 ALTER TABLE dbo.doc_head ADD
 full_name nvarchar(255) null,
 member_im nvarchar(255) null;
+ALTER TABLE dbo.fn_mp_dir alter column description nvarchar(255) NULL;

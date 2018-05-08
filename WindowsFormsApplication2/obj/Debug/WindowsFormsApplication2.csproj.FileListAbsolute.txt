@@ -16,7 +16,6 @@ C:\temp\ККТ\kkt-base\WindowsFormsApplication2\obj\Debug\WindowsFormsApplicati
 C:\temp\ККТ\kkt-base\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
 C:\temp\ККТ\kkt-base\WindowsFormsApplication2\obj\Debug\RdlCompile.cache
 C:\temp\ККТ\kkt-base\WindowsFormsApplication2\obj\Debug\RdlCompile.compiled
-C:\temp\ККТ\kkt-base\WindowsFormsApplication2\bin\Debug\kkt.sdf
 C:\temp\ККТ\kkt-base\WindowsFormsApplication2\bin\Debug\Report1.rdlc
 C:\temp\ККТ\kkt-base\WindowsFormsApplication2\bin\Debug\Report2.rdlc
 C:\temp\ККТ\kkt-base\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
@@ -27,3 +26,4 @@ C:\temp\ККТ\kkt-base\WindowsFormsApplication2\bin\Debug\Microsoft.Office.Inte
 C:\temp\ККТ\kkt-base\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
 C:\temp\ККТ\kkt-base\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
 C:\temp\ККТ\kkt-base\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.LocationForm.resources
+C:\temp\ККТ\kkt-base\WindowsFormsApplication2\bin\Debug\Microsoft.Office.Interop.Excel.dll

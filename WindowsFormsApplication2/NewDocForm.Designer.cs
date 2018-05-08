@@ -113,6 +113,7 @@
             this.paymentstatusdirBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.memberImLabel = new System.Windows.Forms.Label();
             this.memberIMTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.fullNameTextBox = new System.Windows.Forms.TextBox();
@@ -160,17 +161,13 @@
             this.add_time_button3 = new System.Windows.Forms.Button();
             this.add_time_button2 = new System.Windows.Forms.Button();
             this.add_time_button1 = new System.Windows.Forms.Button();
-            this.fn_mp_label = new System.Windows.Forms.Label();
             this.fn_num_label = new System.Windows.Forms.Label();
             this.sumLabel = new System.Windows.Forms.Label();
-            this.deleteMpButton = new System.Windows.Forms.Button();
             this.deleteNumButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.locationTextBox = new System.Windows.Forms.TextBox();
             this.descriptionRichTextBox1 = new System.Windows.Forms.RichTextBox();
             this.model_idComboBox = new System.Windows.Forms.ComboBox();
-            this.mp_idComboBox = new System.Windows.Forms.ComboBox();
-            this.fn_mp_dirBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.master_idComboBox = new System.Windows.Forms.ComboBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.numberTextBox1 = new System.Windows.Forms.TextBox();
@@ -214,6 +211,7 @@
             this.reportComboBox = new System.Windows.Forms.ComboBox();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.reportPanel = new System.Windows.Forms.Panel();
+            this.fn_mp_dirBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.payfkBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.doc_headTableAdapter = new WindowsFormsApplication2.kktDataSetTableAdapters.doc_headTableAdapter();
@@ -231,7 +229,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.reportDataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportDataTable1TableAdapter = new WindowsFormsApplication2.kktDataSetTableAdapters.reportDataTable1TableAdapter();
-            this.memberImLabel = new System.Windows.Forms.Label();
+            this.mpComboBox = new System.Windows.Forms.ComboBox();
             numberLabel = new System.Windows.Forms.Label();
             data_startLabel = new System.Windows.Forms.Label();
             data_endLabel = new System.Windows.Forms.Label();
@@ -293,13 +291,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.masters_dirBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ofd_dirBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doc_kkmBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fn_mp_dirBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fn_number_dirBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kktBindingNavigator)).BeginInit();
             this.kktBindingNavigator.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dirGridView)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fn_mp_dirBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.payfkBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportDataTable1BindingSource)).BeginInit();
@@ -309,7 +307,7 @@
             // 
             numberLabel.AutoSize = true;
             numberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            numberLabel.Location = new System.Drawing.Point(9, 75);
+            numberLabel.Location = new System.Drawing.Point(13, 49);
             numberLabel.Name = "numberLabel";
             numberLabel.Size = new System.Drawing.Size(59, 20);
             numberLabel.TabIndex = 0;
@@ -319,7 +317,7 @@
             // 
             data_startLabel.AutoSize = true;
             data_startLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            data_startLabel.Location = new System.Drawing.Point(231, 75);
+            data_startLabel.Location = new System.Drawing.Point(235, 49);
             data_startLabel.Name = "data_startLabel";
             data_startLabel.Size = new System.Drawing.Size(85, 20);
             data_startLabel.TabIndex = 4;
@@ -329,7 +327,7 @@
             // 
             data_endLabel.AutoSize = true;
             data_endLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            data_endLabel.Location = new System.Drawing.Point(231, 99);
+            data_endLabel.Location = new System.Drawing.Point(235, 73);
             data_endLabel.Name = "data_endLabel";
             data_endLabel.Size = new System.Drawing.Size(83, 20);
             data_endLabel.TabIndex = 6;
@@ -349,7 +347,7 @@
             // 
             yearLabel.AutoSize = true;
             yearLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            yearLabel.Location = new System.Drawing.Point(9, 102);
+            yearLabel.Location = new System.Drawing.Point(13, 76);
             yearLabel.Name = "yearLabel";
             yearLabel.Size = new System.Drawing.Size(73, 20);
             yearLabel.TabIndex = 13;
@@ -369,7 +367,7 @@
             // 
             nameLabel.AutoSize = true;
             nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            nameLabel.Location = new System.Drawing.Point(9, 132);
+            nameLabel.Location = new System.Drawing.Point(13, 106);
             nameLabel.Name = "nameLabel";
             nameLabel.Size = new System.Drawing.Size(83, 20);
             nameLabel.TabIndex = 15;
@@ -379,7 +377,7 @@
             // 
             innLabel.AutoSize = true;
             innLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            innLabel.Location = new System.Drawing.Point(9, 196);
+            innLabel.Location = new System.Drawing.Point(13, 170);
             innLabel.Name = "innLabel";
             innLabel.Size = new System.Drawing.Size(44, 20);
             innLabel.TabIndex = 17;
@@ -389,7 +387,7 @@
             // 
             kppLabel.AutoSize = true;
             kppLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            kppLabel.Location = new System.Drawing.Point(267, 196);
+            kppLabel.Location = new System.Drawing.Point(271, 170);
             kppLabel.Name = "kppLabel";
             kppLabel.Size = new System.Drawing.Size(43, 20);
             kppLabel.TabIndex = 19;
@@ -399,7 +397,7 @@
             // 
             addressLabel.AutoSize = true;
             addressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            addressLabel.Location = new System.Drawing.Point(9, 228);
+            addressLabel.Location = new System.Drawing.Point(13, 202);
             addressLabel.Name = "addressLabel";
             addressLabel.Size = new System.Drawing.Size(86, 20);
             addressLabel.TabIndex = 21;
@@ -409,17 +407,17 @@
             // 
             phoneLabel.AutoSize = true;
             phoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            phoneLabel.Location = new System.Drawing.Point(9, 260);
+            phoneLabel.Location = new System.Drawing.Point(13, 234);
             phoneLabel.Name = "phoneLabel";
             phoneLabel.Size = new System.Drawing.Size(79, 20);
             phoneLabel.TabIndex = 23;
-            phoneLabel.Text = "Телефон";            
+            phoneLabel.Text = "Телефон";
             // 
             // faxLabel
             // 
             faxLabel.AutoSize = true;
             faxLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            faxLabel.Location = new System.Drawing.Point(267, 260);
+            faxLabel.Location = new System.Drawing.Point(271, 234);
             faxLabel.Name = "faxLabel";
             faxLabel.Size = new System.Drawing.Size(49, 20);
             faxLabel.TabIndex = 25;
@@ -429,7 +427,7 @@
             // 
             memberLabel.AutoSize = true;
             memberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            memberLabel.Location = new System.Drawing.Point(9, 292);
+            memberLabel.Location = new System.Drawing.Point(13, 266);
             memberLabel.Name = "memberLabel";
             memberLabel.Size = new System.Drawing.Size(61, 20);
             memberLabel.TabIndex = 27;
@@ -439,7 +437,7 @@
             // 
             member_baseLabel.AutoSize = true;
             member_baseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            member_baseLabel.Location = new System.Drawing.Point(9, 362);
+            member_baseLabel.Location = new System.Drawing.Point(13, 336);
             member_baseLabel.Name = "member_baseLabel";
             member_baseLabel.Size = new System.Drawing.Size(89, 40);
             member_baseLabel.TabIndex = 29;
@@ -449,7 +447,7 @@
             // 
             ogrnLabel.AutoSize = true;
             ogrnLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            ogrnLabel.Location = new System.Drawing.Point(9, 401);
+            ogrnLabel.Location = new System.Drawing.Point(13, 375);
             ogrnLabel.Name = "ogrnLabel";
             ogrnLabel.Size = new System.Drawing.Size(52, 20);
             ogrnLabel.TabIndex = 31;
@@ -459,7 +457,7 @@
             // 
             bankLabel.AutoSize = true;
             bankLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            bankLabel.Location = new System.Drawing.Point(9, 433);
+            bankLabel.Location = new System.Drawing.Point(13, 407);
             bankLabel.Name = "bankLabel";
             bankLabel.Size = new System.Drawing.Size(46, 20);
             bankLabel.TabIndex = 33;
@@ -469,7 +467,7 @@
             // 
             bank_accountLabel.AutoSize = true;
             bank_accountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            bank_accountLabel.Location = new System.Drawing.Point(9, 468);
+            bank_accountLabel.Location = new System.Drawing.Point(13, 442);
             bank_accountLabel.Name = "bank_accountLabel";
             bank_accountLabel.Size = new System.Drawing.Size(40, 20);
             bank_accountLabel.TabIndex = 35;
@@ -479,7 +477,7 @@
             // 
             bank_account_corLabel.AutoSize = true;
             bank_account_corLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            bank_account_corLabel.Location = new System.Drawing.Point(9, 497);
+            bank_account_corLabel.Location = new System.Drawing.Point(13, 471);
             bank_account_corLabel.Name = "bank_account_corLabel";
             bank_account_corLabel.Size = new System.Drawing.Size(40, 20);
             bank_account_corLabel.TabIndex = 37;
@@ -489,7 +487,7 @@
             // 
             bikLabel.AutoSize = true;
             bikLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            bikLabel.Location = new System.Drawing.Point(334, 465);
+            bikLabel.Location = new System.Drawing.Point(338, 439);
             bikLabel.Name = "bikLabel";
             bikLabel.Size = new System.Drawing.Size(41, 20);
             bikLabel.TabIndex = 39;
@@ -499,7 +497,7 @@
             // 
             emailLabel.AutoSize = true;
             emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            emailLabel.Location = new System.Drawing.Point(9, 529);
+            emailLabel.Location = new System.Drawing.Point(13, 503);
             emailLabel.Name = "emailLabel";
             emailLabel.Size = new System.Drawing.Size(53, 20);
             emailLabel.TabIndex = 41;
@@ -509,7 +507,7 @@
             // 
             periodLabel.AutoSize = true;
             periodLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            periodLabel.Location = new System.Drawing.Point(292, 561);
+            periodLabel.Location = new System.Drawing.Point(296, 535);
             periodLabel.Name = "periodLabel";
             periodLabel.Size = new System.Drawing.Size(68, 20);
             periodLabel.TabIndex = 45;
@@ -519,7 +517,7 @@
             // 
             descriptionLabel.AutoSize = true;
             descriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            descriptionLabel.Location = new System.Drawing.Point(100, 589);
+            descriptionLabel.Location = new System.Drawing.Point(104, 563);
             descriptionLabel.Name = "descriptionLabel";
             descriptionLabel.Size = new System.Drawing.Size(329, 20);
             descriptionLabel.TabIndex = 47;
@@ -683,7 +681,7 @@
             this.payment_status_idLabel.AutoSize = true;
             this.payment_status_idLabel.Cursor = System.Windows.Forms.Cursors.Default;
             this.payment_status_idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.payment_status_idLabel.Location = new System.Drawing.Point(9, 561);
+            this.payment_status_idLabel.Location = new System.Drawing.Point(13, 535);
             this.payment_status_idLabel.Name = "payment_status_idLabel";
             this.payment_status_idLabel.Size = new System.Drawing.Size(67, 20);
             this.payment_status_idLabel.TabIndex = 43;
@@ -1183,11 +1181,21 @@
             this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
             this.dataGridViewTextBoxColumn38.ReadOnly = true;
             // 
+            // memberImLabel
+            // 
+            this.memberImLabel.AutoSize = true;
+            this.memberImLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.memberImLabel.Location = new System.Drawing.Point(12, 291);
+            this.memberImLabel.Name = "memberImLabel";
+            this.memberImLabel.Size = new System.Drawing.Size(81, 40);
+            this.memberImLabel.TabIndex = 55;
+            this.memberImLabel.Text = "Предста-\r\nвитель";
+            // 
             // memberIMTextBox
             // 
             this.memberIMTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.doc_headBindingSource, "member_im", true));
             this.memberIMTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.memberIMTextBox.Location = new System.Drawing.Point(104, 321);
+            this.memberIMTextBox.Location = new System.Drawing.Point(108, 295);
             this.memberIMTextBox.Name = "memberIMTextBox";
             this.memberIMTextBox.Size = new System.Drawing.Size(487, 26);
             this.memberIMTextBox.TabIndex = 54;
@@ -1196,7 +1204,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(8, 157);
+            this.label4.Location = new System.Drawing.Point(12, 131);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 40);
             this.label4.TabIndex = 53;
@@ -1206,7 +1214,7 @@
             // 
             this.fullNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.doc_headBindingSource, "full_name", true));
             this.fullNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.fullNameTextBox.Location = new System.Drawing.Point(104, 161);
+            this.fullNameTextBox.Location = new System.Drawing.Point(108, 135);
             this.fullNameTextBox.Name = "fullNameTextBox";
             this.fullNameTextBox.Size = new System.Drawing.Size(487, 26);
             this.fullNameTextBox.TabIndex = 52;
@@ -1225,7 +1233,7 @@
             // 
             this.faxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.doc_headBindingSource, "fax", true));
             this.faxTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.faxTextBox.Location = new System.Drawing.Point(322, 257);
+            this.faxTextBox.Location = new System.Drawing.Point(326, 231);
             this.faxTextBox.Name = "faxTextBox";
             this.faxTextBox.Size = new System.Drawing.Size(169, 26);
             this.faxTextBox.TabIndex = 26;
@@ -1234,7 +1242,7 @@
             // 
             this.phoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.doc_headBindingSource, "phone", true));
             this.phoneTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.phoneTextBox.Location = new System.Drawing.Point(104, 257);
+            this.phoneTextBox.Location = new System.Drawing.Point(108, 231);
             this.phoneTextBox.Name = "phoneTextBox";
             this.phoneTextBox.Size = new System.Drawing.Size(130, 26);
             this.phoneTextBox.TabIndex = 24;
@@ -1243,7 +1251,7 @@
             // 
             this.numberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.doc_headBindingSource, "number", true));
             this.numberTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numberTextBox.Location = new System.Drawing.Point(104, 70);
+            this.numberTextBox.Location = new System.Drawing.Point(108, 44);
             this.numberTextBox.Name = "numberTextBox";
             this.numberTextBox.Size = new System.Drawing.Size(100, 26);
             this.numberTextBox.TabIndex = 1;
@@ -1254,7 +1262,7 @@
             // 
             this.descriptionRichTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.doc_headBindingSource, "description", true));
             this.descriptionRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.descriptionRichTextBox.Location = new System.Drawing.Point(104, 612);
+            this.descriptionRichTextBox.Location = new System.Drawing.Point(108, 586);
             this.descriptionRichTextBox.Name = "descriptionRichTextBox";
             this.descriptionRichTextBox.Size = new System.Drawing.Size(487, 43);
             this.descriptionRichTextBox.TabIndex = 48;
@@ -1264,7 +1272,7 @@
             // 
             this.memberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.doc_headBindingSource, "member", true));
             this.memberTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.memberTextBox.Location = new System.Drawing.Point(104, 289);
+            this.memberTextBox.Location = new System.Drawing.Point(108, 263);
             this.memberTextBox.Name = "memberTextBox";
             this.memberTextBox.Size = new System.Drawing.Size(487, 26);
             this.memberTextBox.TabIndex = 28;
@@ -1273,7 +1281,7 @@
             // 
             this.addressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.doc_headBindingSource, "address", true));
             this.addressTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addressTextBox.Location = new System.Drawing.Point(104, 225);
+            this.addressTextBox.Location = new System.Drawing.Point(108, 199);
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(487, 26);
             this.addressTextBox.TabIndex = 22;
@@ -1282,7 +1290,7 @@
             // 
             this.data_startDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.doc_headBindingSource, "data_start", true));
             this.data_startDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.data_startDateTimePicker.Location = new System.Drawing.Point(322, 70);
+            this.data_startDateTimePicker.Location = new System.Drawing.Point(326, 44);
             this.data_startDateTimePicker.Name = "data_startDateTimePicker";
             this.data_startDateTimePicker.Size = new System.Drawing.Size(169, 26);
             this.data_startDateTimePicker.TabIndex = 5;
@@ -1312,7 +1320,7 @@
             "декабрь",
             "4 квартал",
             "год"});
-            this.periodComboBox.Location = new System.Drawing.Point(366, 558);
+            this.periodComboBox.Location = new System.Drawing.Point(370, 532);
             this.periodComboBox.Name = "periodComboBox";
             this.periodComboBox.Size = new System.Drawing.Size(225, 28);
             this.periodComboBox.TabIndex = 46;
@@ -1321,7 +1329,7 @@
             // 
             this.member_baseTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.doc_headBindingSource, "member base", true));
             this.member_baseTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.member_baseTextBox.Location = new System.Drawing.Point(104, 366);
+            this.member_baseTextBox.Location = new System.Drawing.Point(108, 340);
             this.member_baseTextBox.Name = "member_baseTextBox";
             this.member_baseTextBox.Size = new System.Drawing.Size(487, 26);
             this.member_baseTextBox.TabIndex = 30;
@@ -1330,7 +1338,7 @@
             // 
             this.kppTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.doc_headBindingSource, "kpp", true));
             this.kppTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.kppTextBox.Location = new System.Drawing.Point(322, 193);
+            this.kppTextBox.Location = new System.Drawing.Point(326, 167);
             this.kppTextBox.Name = "kppTextBox";
             this.kppTextBox.Size = new System.Drawing.Size(169, 26);
             this.kppTextBox.TabIndex = 20;
@@ -1339,7 +1347,7 @@
             // 
             this.data_endDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.doc_headBindingSource, "data_end", true));
             this.data_endDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.data_endDateTimePicker.Location = new System.Drawing.Point(322, 102);
+            this.data_endDateTimePicker.Location = new System.Drawing.Point(326, 76);
             this.data_endDateTimePicker.Name = "data_endDateTimePicker";
             this.data_endDateTimePicker.Size = new System.Drawing.Size(169, 26);
             this.data_endDateTimePicker.TabIndex = 7;
@@ -1353,7 +1361,7 @@
             this.payment_status_idComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.payment_status_idComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.payment_status_idComboBox.FormattingEnabled = true;
-            this.payment_status_idComboBox.Location = new System.Drawing.Point(104, 558);
+            this.payment_status_idComboBox.Location = new System.Drawing.Point(108, 532);
             this.payment_status_idComboBox.Name = "payment_status_idComboBox";
             this.payment_status_idComboBox.Size = new System.Drawing.Size(173, 28);
             this.payment_status_idComboBox.TabIndex = 44;
@@ -1364,7 +1372,7 @@
             // 
             this.ogrnTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.doc_headBindingSource, "ogrn", true));
             this.ogrnTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ogrnTextBox.Location = new System.Drawing.Point(104, 398);
+            this.ogrnTextBox.Location = new System.Drawing.Point(108, 372);
             this.ogrnTextBox.Name = "ogrnTextBox";
             this.ogrnTextBox.Size = new System.Drawing.Size(224, 26);
             this.ogrnTextBox.TabIndex = 32;
@@ -1373,7 +1381,7 @@
             // 
             this.innTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.doc_headBindingSource, "inn", true));
             this.innTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.innTextBox.Location = new System.Drawing.Point(104, 193);
+            this.innTextBox.Location = new System.Drawing.Point(108, 167);
             this.innTextBox.Name = "innTextBox";
             this.innTextBox.Size = new System.Drawing.Size(130, 26);
             this.innTextBox.TabIndex = 18;
@@ -1382,7 +1390,7 @@
             // 
             this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.doc_headBindingSource, "email", true));
             this.emailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.emailTextBox.Location = new System.Drawing.Point(104, 526);
+            this.emailTextBox.Location = new System.Drawing.Point(108, 500);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(224, 26);
             this.emailTextBox.TabIndex = 42;
@@ -1391,7 +1399,7 @@
             // 
             this.bankTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.doc_headBindingSource, "bank", true));
             this.bankTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bankTextBox.Location = new System.Drawing.Point(104, 430);
+            this.bankTextBox.Location = new System.Drawing.Point(108, 404);
             this.bankTextBox.Name = "bankTextBox";
             this.bankTextBox.Size = new System.Drawing.Size(487, 26);
             this.bankTextBox.TabIndex = 34;
@@ -1400,7 +1408,7 @@
             // 
             this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.doc_headBindingSource, "name", true));
             this.nameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.nameTextBox.Location = new System.Drawing.Point(104, 129);
+            this.nameTextBox.Location = new System.Drawing.Point(108, 103);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(487, 26);
             this.nameTextBox.TabIndex = 16;
@@ -1421,7 +1429,7 @@
             // 
             this.bikTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.doc_headBindingSource, "bik", true));
             this.bikTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bikTextBox.Location = new System.Drawing.Point(376, 462);
+            this.bikTextBox.Location = new System.Drawing.Point(380, 436);
             this.bikTextBox.Name = "bikTextBox";
             this.bikTextBox.Size = new System.Drawing.Size(215, 26);
             this.bikTextBox.TabIndex = 40;
@@ -1430,7 +1438,7 @@
             // 
             this.bank_accountTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.doc_headBindingSource, "bank_account", true));
             this.bank_accountTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bank_accountTextBox.Location = new System.Drawing.Point(104, 462);
+            this.bank_accountTextBox.Location = new System.Drawing.Point(108, 436);
             this.bank_accountTextBox.Name = "bank_accountTextBox";
             this.bank_accountTextBox.Size = new System.Drawing.Size(224, 26);
             this.bank_accountTextBox.TabIndex = 36;
@@ -1446,7 +1454,7 @@
             "2019",
             "2020",
             "2021"});
-            this.yearComboBox.Location = new System.Drawing.Point(104, 99);
+            this.yearComboBox.Location = new System.Drawing.Point(108, 73);
             this.yearComboBox.Name = "yearComboBox";
             this.yearComboBox.Size = new System.Drawing.Size(100, 28);
             this.yearComboBox.TabIndex = 14;
@@ -1457,7 +1465,7 @@
             // 
             this.bank_account_corTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.doc_headBindingSource, "bank_account_cor", true));
             this.bank_account_corTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bank_account_corTextBox.Location = new System.Drawing.Point(104, 494);
+            this.bank_account_corTextBox.Location = new System.Drawing.Point(108, 468);
             this.bank_account_corTextBox.Name = "bank_account_corTextBox";
             this.bank_account_corTextBox.Size = new System.Drawing.Size(224, 26);
             this.bank_account_corTextBox.TabIndex = 38;
@@ -1475,14 +1483,13 @@
             // 
             // splitContainer3.Panel2
             // 
+            this.splitContainer3.Panel2.Controls.Add(this.mpComboBox);
             this.splitContainer3.Panel2.Controls.Add(this.locationButton);
             this.splitContainer3.Panel2.Controls.Add(this.add_time_button3);
             this.splitContainer3.Panel2.Controls.Add(this.add_time_button2);
             this.splitContainer3.Panel2.Controls.Add(this.add_time_button1);
-            this.splitContainer3.Panel2.Controls.Add(this.fn_mp_label);
             this.splitContainer3.Panel2.Controls.Add(this.fn_num_label);
             this.splitContainer3.Panel2.Controls.Add(this.sumLabel);
-            this.splitContainer3.Panel2.Controls.Add(this.deleteMpButton);
             this.splitContainer3.Panel2.Controls.Add(this.deleteNumButton);
             this.splitContainer3.Panel2.Controls.Add(this.label2);
             this.splitContainer3.Panel2.Controls.Add(this.locationTextBox);
@@ -1492,7 +1499,6 @@
             this.splitContainer3.Panel2.Controls.Add(this.model_idComboBox);
             this.splitContainer3.Panel2.Controls.Add(mp_idLabel);
             this.splitContainer3.Panel2.Controls.Add(model_idLabel);
-            this.splitContainer3.Panel2.Controls.Add(this.mp_idComboBox);
             this.splitContainer3.Panel2.Controls.Add(this.master_idComboBox);
             this.splitContainer3.Panel2.Controls.Add(passwordLabel);
             this.splitContainer3.Panel2.Controls.Add(master_idLabel);
@@ -1701,16 +1707,6 @@
             this.add_time_button1.UseVisualStyleBackColor = true;
             this.add_time_button1.Click += new System.EventHandler(this.add_time_button_Click);
             // 
-            // fn_mp_label
-            // 
-            this.fn_mp_label.AutoSize = true;
-            this.fn_mp_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.fn_mp_label.Location = new System.Drawing.Point(99, 426);
-            this.fn_mp_label.Name = "fn_mp_label";
-            this.fn_mp_label.Size = new System.Drawing.Size(51, 20);
-            this.fn_mp_label.TabIndex = 36;
-            this.fn_mp_label.Text = "label1";
-            // 
             // fn_num_label
             // 
             this.fn_num_label.AutoSize = true;
@@ -1730,17 +1726,6 @@
             this.sumLabel.Size = new System.Drawing.Size(160, 20);
             this.sumLabel.TabIndex = 34;
             this.sumLabel.Text = "Стоимость в месяц:";
-            // 
-            // deleteMpButton
-            // 
-            this.deleteMpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.deleteMpButton.Image = ((System.Drawing.Image)(resources.GetObject("deleteMpButton.Image")));
-            this.deleteMpButton.Location = new System.Drawing.Point(583, 425);
-            this.deleteMpButton.Name = "deleteMpButton";
-            this.deleteMpButton.Size = new System.Drawing.Size(23, 23);
-            this.deleteMpButton.TabIndex = 33;
-            this.deleteMpButton.UseVisualStyleBackColor = true;
-            this.deleteMpButton.Click += new System.EventHandler(this.deleteMpButton_Click);
             // 
             // deleteNumButton
             // 
@@ -1796,26 +1781,6 @@
             this.model_idComboBox.Size = new System.Drawing.Size(239, 28);
             this.model_idComboBox.TabIndex = 3;
             this.model_idComboBox.ValueMember = "id";
-            // 
-            // mp_idComboBox
-            // 
-            this.mp_idComboBox.CausesValidation = false;
-            this.mp_idComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.doc_kkmBindingSource, "mp_id", true));
-            this.mp_idComboBox.DataSource = this.fn_mp_dirBindingSource;
-            this.mp_idComboBox.DisplayMember = "value";
-            this.mp_idComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.mp_idComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.mp_idComboBox.FormattingEnabled = true;
-            this.mp_idComboBox.Location = new System.Drawing.Point(99, 423);
-            this.mp_idComboBox.Name = "mp_idComboBox";
-            this.mp_idComboBox.Size = new System.Drawing.Size(479, 28);
-            this.mp_idComboBox.TabIndex = 29;
-            this.mp_idComboBox.ValueMember = "id";
-            // 
-            // fn_mp_dirBindingSource
-            // 
-            this.fn_mp_dirBindingSource.DataMember = "fn_mp_dir";
-            this.fn_mp_dirBindingSource.DataSource = this.kktDataSet;
             // 
             // master_idComboBox
             // 
@@ -2258,6 +2223,11 @@
             this.reportPanel.Size = new System.Drawing.Size(802, 37);
             this.reportPanel.TabIndex = 0;
             // 
+            // fn_mp_dirBindingSource
+            // 
+            this.fn_mp_dirBindingSource.DataMember = "fn_mp_dir";
+            this.fn_mp_dirBindingSource.DataSource = this.kktDataSet;
+            // 
             // payfkBindingSource
             // 
             this.payfkBindingSource.DataMember = "pay_fk";
@@ -2344,15 +2314,18 @@
             // 
             this.reportDataTable1TableAdapter.ClearBeforeFill = true;
             // 
-            // memberImLabel
+            // mpComboBox
             // 
-            this.memberImLabel.AutoSize = true;
-            this.memberImLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.memberImLabel.Location = new System.Drawing.Point(8, 317);
-            this.memberImLabel.Name = "memberImLabel";
-            this.memberImLabel.Size = new System.Drawing.Size(81, 40);
-            this.memberImLabel.TabIndex = 55;
-            this.memberImLabel.Text = "Предста-\r\nвитель";
+            this.mpComboBox.DataSource = this.fn_mp_dirBindingSource;
+            this.mpComboBox.DisplayMember = "value";
+            this.mpComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.mpComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.mpComboBox.FormattingEnabled = true;
+            this.mpComboBox.Location = new System.Drawing.Point(99, 419);
+            this.mpComboBox.Name = "mpComboBox";
+            this.mpComboBox.Size = new System.Drawing.Size(505, 28);
+            this.mpComboBox.TabIndex = 41;
+            this.mpComboBox.ValueMember = "id";
             // 
             // NewDocForm
             // 
@@ -2396,7 +2369,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.masters_dirBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ofd_dirBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doc_kkmBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fn_mp_dirBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fn_number_dirBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kktBindingNavigator)).EndInit();
             this.kktBindingNavigator.ResumeLayout(false);
@@ -2405,6 +2377,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dirGridView)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fn_mp_dirBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.payfkBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportDataTable1BindingSource)).EndInit();
@@ -2499,7 +2472,6 @@
         private System.Windows.Forms.ComboBox ofd_idComboBox;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.TextBox loginTextBox;
-        private System.Windows.Forms.ComboBox mp_idComboBox;
         private System.Windows.Forms.RichTextBox descriptionRichTextBox1;
         private System.Windows.Forms.DataGridView doc_kkmDataGridView;
         private System.Windows.Forms.BindingNavigator kktBindingNavigator;
@@ -2522,7 +2494,6 @@
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.BindingNavigator doc_headBindingNavigator;
-        private System.Windows.Forms.Button deleteMpButton;
         private System.Windows.Forms.Button deleteNumButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
@@ -2550,7 +2521,6 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.Label sumLabel;
         private System.Windows.Forms.BindingSource payfkBindingSource;
-        private System.Windows.Forms.Label fn_mp_label;
         private System.Windows.Forms.Label fn_num_label;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn unactive_kkm;
@@ -2583,5 +2553,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox memberIMTextBox;
         private System.Windows.Forms.Label memberImLabel;
+        private System.Windows.Forms.ComboBox mpComboBox;
     }
 }

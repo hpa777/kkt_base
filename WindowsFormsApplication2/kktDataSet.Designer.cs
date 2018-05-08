@@ -2317,7 +2317,7 @@ namespace WindowsFormsApplication2 {
                 this.columnid.Unique = true;
                 this.columnvalue.AllowDBNull = false;
                 this.columnvalue.MaxLength = 100;
-                this.columndescription.MaxLength = 100;
+                this.columndescription.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
