@@ -157,6 +157,8 @@
             this.ofd_dirBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.doc_kkmBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mpComboBox = new System.Windows.Forms.ComboBox();
+            this.fn_mp_dirBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.locationButton = new System.Windows.Forms.Button();
             this.add_time_button3 = new System.Windows.Forms.Button();
             this.add_time_button2 = new System.Windows.Forms.Button();
@@ -211,7 +213,6 @@
             this.reportComboBox = new System.Windows.Forms.ComboBox();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.reportPanel = new System.Windows.Forms.Panel();
-            this.fn_mp_dirBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.payfkBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.doc_headTableAdapter = new WindowsFormsApplication2.kktDataSetTableAdapters.doc_headTableAdapter();
@@ -229,7 +230,6 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.reportDataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportDataTable1TableAdapter = new WindowsFormsApplication2.kktDataSetTableAdapters.reportDataTable1TableAdapter();
-            this.mpComboBox = new System.Windows.Forms.ComboBox();
             numberLabel = new System.Windows.Forms.Label();
             data_startLabel = new System.Windows.Forms.Label();
             data_endLabel = new System.Windows.Forms.Label();
@@ -291,13 +291,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.masters_dirBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ofd_dirBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doc_kkmBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fn_mp_dirBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fn_number_dirBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kktBindingNavigator)).BeginInit();
             this.kktBindingNavigator.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dirGridView)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fn_mp_dirBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.payfkBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportDataTable1BindingSource)).BeginInit();
@@ -1667,6 +1667,25 @@
             this.doc_kkmBindingSource.DataSource = this.doc_headBindingSource;
             this.doc_kkmBindingSource.CurrentChanged += new System.EventHandler(this.doc_kkmBindingSource_CurrentChanged);
             // 
+            // mpComboBox
+            // 
+            this.mpComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.doc_kkmBindingSource, "mp_id", true));
+            this.mpComboBox.DataSource = this.fn_mp_dirBindingSource;
+            this.mpComboBox.DisplayMember = "value";
+            this.mpComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.mpComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.mpComboBox.FormattingEnabled = true;
+            this.mpComboBox.Location = new System.Drawing.Point(99, 419);
+            this.mpComboBox.Name = "mpComboBox";
+            this.mpComboBox.Size = new System.Drawing.Size(505, 28);
+            this.mpComboBox.TabIndex = 41;
+            this.mpComboBox.ValueMember = "id";
+            // 
+            // fn_mp_dirBindingSource
+            // 
+            this.fn_mp_dirBindingSource.DataMember = "fn_mp_dir";
+            this.fn_mp_dirBindingSource.DataSource = this.kktDataSet;
+            // 
             // locationButton
             // 
             this.locationButton.Location = new System.Drawing.Point(581, 47);
@@ -2223,11 +2242,6 @@
             this.reportPanel.Size = new System.Drawing.Size(802, 37);
             this.reportPanel.TabIndex = 0;
             // 
-            // fn_mp_dirBindingSource
-            // 
-            this.fn_mp_dirBindingSource.DataMember = "fn_mp_dir";
-            this.fn_mp_dirBindingSource.DataSource = this.kktDataSet;
-            // 
             // payfkBindingSource
             // 
             this.payfkBindingSource.DataMember = "pay_fk";
@@ -2314,19 +2328,6 @@
             // 
             this.reportDataTable1TableAdapter.ClearBeforeFill = true;
             // 
-            // mpComboBox
-            // 
-            this.mpComboBox.DataSource = this.fn_mp_dirBindingSource;
-            this.mpComboBox.DisplayMember = "value";
-            this.mpComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.mpComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.mpComboBox.FormattingEnabled = true;
-            this.mpComboBox.Location = new System.Drawing.Point(99, 419);
-            this.mpComboBox.Name = "mpComboBox";
-            this.mpComboBox.Size = new System.Drawing.Size(505, 28);
-            this.mpComboBox.TabIndex = 41;
-            this.mpComboBox.ValueMember = "id";
-            // 
             // NewDocForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2369,6 +2370,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.masters_dirBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ofd_dirBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doc_kkmBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fn_mp_dirBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fn_number_dirBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kktBindingNavigator)).EndInit();
             this.kktBindingNavigator.ResumeLayout(false);
@@ -2377,7 +2379,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dirGridView)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fn_mp_dirBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.payfkBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportDataTable1BindingSource)).EndInit();
